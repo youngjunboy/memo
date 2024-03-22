@@ -1,35 +1,27 @@
 # memo
-update customer set gender='W' where name = '김문영'
+
+(base) C:\Users\user>sqlplus
+
+SQL*Plus: Release 11.2.0.2.0 Production on 금 3월 22 11:08:09 2024
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:1234
+ERROR:
+ORA-28002: the password will expire within 7 days
 
 
-select name, gender from customer where name ='김문영';
 
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
 
-update customer set mileage=0 where name = '이상훈';
+SQL> alter user hr
+  2  identified by hr
+  3  account unlock;
 
+User altered.
 
-select name, mileage from customer where name = '이상훈';
-
-
-update customer set mileage=10000 where gender='W' and age>=30 and age<=39;
-
-
-select name, gender, age, mileage from customer where gender='W' and age>=30 and age<=39;
-
-
-delete from customer where name = '유지수';
-
-
-select * from customer where name = '유지수';
-
-
-select num, name, address, from customer where address like '%성남시 중원구 광명로 123%';
-
-
-delete from customer where num = 8;
-
-
-select * from customer where num = 8;
-
-
-delete from customer;
+SQL> conn hr/hr;
+Connected.
+SQL>
