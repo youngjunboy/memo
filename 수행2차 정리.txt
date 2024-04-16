@@ -57,7 +57,7 @@ select * from jobsbe
 
 문제7-2> jobs테이블에서   min_salary값이 5000 이하 이거나 max_salary값 10000 이상인  job_id 을 출력하시오.
  select job_id from jobs
-  where min_salary<=5000 and max_salary>=10000;
+  where min_salary<=5000 or max_salary>=10000;
 
 
 문제7-3> jobs테이블에서  job_title이 'Manager' 인 행전체을 출력하시오.
